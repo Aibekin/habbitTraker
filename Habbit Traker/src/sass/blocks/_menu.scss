@@ -1,0 +1,46 @@
+.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+    &__item {
+        width: 55px;
+        height: 55px;
+        background-color: #fff;
+        border: none;
+        border-radius: 15px;
+        display: flex;
+        justify-content: center; align-items: center;
+        box-shadow: 0 8px 14px rgba($color: #3E6BE0, $alpha: 0.12);
+        cursor: pointer;
+        transition: all 0.3s;
+        &:hover,
+        &-active {
+            background-color: $color1;
+            img {
+                filter: brightness(0) invert(1);
+            }
+        }
+    }
+    &__add {
+        margin-top: 25px;
+        width: 55px;
+        height: 55px;
+        border: 2px solid #CAD5FF;
+        border-radius: 15px;
+        background-color: transparent;
+        display: flex;
+        justify-content: center; align-items: center;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+            background-color: rgba($color: #000000, $alpha: 0.1);
+            border-color: #869eff;
+        }
+    }
+}

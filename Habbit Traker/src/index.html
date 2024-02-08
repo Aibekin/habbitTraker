@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Habbit App</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="./css/style.min.css">
+</head>
+
+<body>
+	<div class="app">
+		<div class="panel">
+			<img src="./img/logo.svg" alt="" class="logo">
+			<nav class="menu">
+				<div class="menu__list"></div>
+				<button class="menu__add" onclick="toggleModal()"><img src="./img/Add.svg" alt=""></button>
+			</nav>
+		</div>
+		<div class="content">
+			<header class="header">
+				<h1 class="header__title">-</h1>
+				<div class="progress">
+					<div class="progress__text">
+						<div class="progress__name">Прогресс</div>
+						<div class="progress__percent">%</div>
+					</div>
+					<div class="progress__bar">
+						<div class="progress__bar-cover"></div>
+					</div>
+				</div>
+			</header>
+			<main class="main">
+				<div id="days"></div>
+				<div class="habbit habbit-create">
+					<div class="habbit__day">День _</div>
+					<form class="habbit__form" method="post" onsubmit="addDays(event)">
+						<input class="input" type="text" placeholder="Комментарий" name="comment">
+						<img src="./img/comment.svg" alt="" class="habbit__img">
+						<button class="submit" type="submit">Готово</button>
+					</form>
+				</div>
+			</main>
+		</div>
+		<div class="overlay" id="modal-add-habbit">
+			<div class="modal">
+				<h2 class="modal__new">Новыя привычка</h2>
+				<h3 class="modal__choose">Иконка</h3>
+				<div class="modal__buttons">
+					<button class="modal__icon modal__icon-active" onclick="setIcon(this, 'sport')"><img
+							src="./img/sport.svg" alt=""></button>
+					<button class="modal__icon" onclick="setIcon(this, 'water')"><img src="./img/water.svg"
+							alt=""></button>
+					<button class="modal__icon" onclick="setIcon(this, 'food')"><img src="./img/food.svg"
+							alt=""></button>
+				</div>
+				<form class="modal__form" method="post" onsubmit="addHabbit(event)">
+					<input type="text" class="input input-modal" name="name" placeholder="Название">
+					<input type="text" class="input" name="icon" hidden placeholder="Иконка" value="sport">
+					<input type="number" class="input input-modal" name="target" placeholder="Цель">
+					<button type="submit" class="submit">Добавить</button>
+				</form>
+				<button class="modal__close" onclick="toggleModal()"><img src="./img/close.svg" alt=""></button>
+			</div>
+		</div>
+	</div>
+	<script src="./js/index.js"></script>
+</body>
+
+</html>

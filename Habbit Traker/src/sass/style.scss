@@ -1,0 +1,19 @@
+@import 'base/variables';
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Comfortaa', cursive;
+}
+
+body {
+    background-color: #F3F6FD;
+}
+
+@import 'blocks/app';
+@import 'blocks/menu';
+@import 'blocks/header';
+@import 'blocks/main';
+@import 'blocks/submit';
+@import 'blocks/modal';

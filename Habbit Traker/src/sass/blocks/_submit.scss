@@ -1,0 +1,16 @@
+.submit {
+    width: 120px;
+    height: 40px;
+    background-color: #EDECFE;
+    border: none;
+    border-radius: 9px;
+    color: $color1;
+    font-size: 13px;
+    font-weight: 400;
+    transition: 0.3s all;
+    cursor: pointer;
+    &:hover {
+        background-color: $color1;
+        color: #fff;
+    }
+}
